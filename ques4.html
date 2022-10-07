@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques-4</title>
+</head>
+<body>
+    <input type="text" class="txt" placeholder="Text here...">
+    <button class="red">RED</button>
+    <button class="green">GREEN</button>
+    <button class="blue">BLUE</button>
+    <div class="result"></div>
+
+    <script>
+        let ip = document.querySelector(".txt")
+        let redBtn = document.querySelector(".red")
+        let greenBtn = document.querySelector(".green")
+        let blueBtn = document.querySelector(".blue")
+        let res = document.querySelector(".result")
+
+        function redBtnClick(){
+            res.innerText = ip.Value
+            res.style.color = "red"
+        }
+        function greenBtnClick(){
+            res.innerText = ip.Value
+            res.style.color = "green"
+        }
+        function blueBtnClick(){
+            res.innerText = ip.Value
+            res.style.color = "blue"
+        }
+        redBtn.addEventListener("click", redBtnClick)
+        greenBtn.addEventListener("click", greenBtnClick)
+        blueBtn.addEventListener("click", blueBtnClick)
+    </script>
+</body>
+</html>

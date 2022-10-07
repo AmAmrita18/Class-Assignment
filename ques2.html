@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ques-2</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="ip" placeholder="Text here...">
+        <button class="plus"> + </button>
+        <button class="minus"> - </button>
+        <div class="result"></div>
+    </div>
+
+    <script>
+        let ip = document.querySelector(".ip")
+        let plus = document.querySelector(".plus")
+        let minus = document.querySelector(".minus")
+        let result = document.querySelector(".result")
+
+        let fontSize = 25
+
+        function incSize() {
+            fontSize = fontSize + 2
+            result.innerText = ip.value
+            result.style.fontSize = fontSize + "px"
+        }
+
+        function decSize() {
+            fontSize = fontSize - 2
+            result.innerText = ip.value
+            result.style.fontSize = fontSize + "px"
+        }
+
+        plus.addEventListener("click", incSize)
+        minus.addEventListener("click", decSize)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques-10</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="password" placeholder="Password here...">
+        <button class="btn">Submit</button>
+        <h3 class="result"></h3>
+        <script>
+            let paswrd = document.querySelector(".password")
+            let submitPaswrd = document.querySelector(".btn") 
+            let res = document.querySelector(".result") 
+
+            function checkPaswrd(){
+                if(paswrd.value.length < 10){
+                   res.innerText = "Error"
+                   res.style.color = "red"
+                }
+                else{
+                    res.innerText = "Success"
+                    res.style.color = "blue"
+                }
+            }
+            submitPaswrd.addEventListener("click", checkPaswrd)
+        </script>
+    </div>
+</body>
+</html>

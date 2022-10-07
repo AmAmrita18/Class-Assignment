@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <input type="number" class="ip">
+    <button class="btn">plus</button>
+    <div class="result"></div>
+    <script>
+
+        let val = document.querySelector(".ip")
+        let btn = document.querySelector(".btn")
+        let result = document.querySelector(".result")
+
+        let count = 0;
+
+        function plusCount() {
+            console.log("hii")
+            count = count + Number(val.value)
+            if(count % 5 == 0){
+                result.innerText = count
+                result.style.color = "green"
+            }
+            else{
+                result.innerText = count
+                result.style.color = "red"
+            }
+        }
+        btn.addEventListener("click", plusCount)
+        
+    </script>
+</body>
+
+</html>
